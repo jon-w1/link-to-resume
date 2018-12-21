@@ -4,6 +4,8 @@
   doc.classList.remove('no-js')
   doc.classList.add('js')
 
+  MicroModal.init()
+
   // Reveal animations
   if (document.body.classList.contains('has-animations')) {
     /* global ScrollReveal */
