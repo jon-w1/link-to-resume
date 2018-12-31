@@ -450,6 +450,7 @@
             </div>
         </footer>
 
+		<!-- Upload modal -->
 		<div class="modal micromodal-slide" id="modal-1" aria-hidden="false">
 			<div class="modal__overlay" tabindex="-1" data-micromodal-close="">
 				<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
@@ -460,16 +461,38 @@
 						<button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
 					</header>
 					<div class="modal__content" id="modal-1-content">
-						<p>This is a completely accessible modal.</p>
-						<p>
-							Try hitting the <code>tab</code> key* and notice how the focus stays within the modal itself. To close modal hit the <code>esc</code> button, click on the overlay or just click the close button.
-						</p>
-						<p>
-							<small>* <code>alt+tab</code> in safari</small>
-						</p>
+						<p>We accept files of format .pdf, .doc, .docx</p>
+						<p>After you upload the file, you will be given a link to share with others</p>
 					</div>
 					<footer class="modal__footer">
-						<button class="modal__btn modal__btn-primary">Continue</button>
+						<button id="uploadButton" class="button button-primary button-shadow">Upload</button>
+						<input type="file" name="myfile" accept=".doc,.docx,.pdf"/>
+						<!--<button class="modal__btn" data-micromodal-close="" aria-label="Close this dialog window">Close</button>-->
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		<!-- Upload progress -->
+		<div class="modal micromodal-slide" id="modal-2" aria-hidden="false">
+			<div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+				<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+					<header class="modal__header">
+						<h2 class="modal__title" id="modal-2-title">
+							Uploading In Progress
+						</h2>
+						<button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+					</header>
+					<div class="modal__content" id="modal-2-content">
+						<p>Your upload is <span id="uploadProgress">0</span>% complete.</p>
+						<div id="shareSection" style="display: none">
+							<p>The unique link to your resume is below:</p>
+							<input type="textarea" style="resize: none;"/> <a href="#" target="_blank">Go!</a>
+						</div>
+					</div>
+					<footer class="modal__footer">
+						<!--<button id="uploadButton" class="button button-primary button-shadow">Upload</button>-->
+						<!--<input type="file" name="myfile" accept=".doc,.docx,.pdf"/>-->
 						<button class="modal__btn" data-micromodal-close="" aria-label="Close this dialog window">Close</button>
 					</footer>
 				</div>

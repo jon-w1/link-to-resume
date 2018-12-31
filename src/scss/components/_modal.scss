@@ -40,7 +40,7 @@
 	font-weight: 600;
 	font-size: 1.25rem;
 	line-height: 1.25;
-	color: #00449e;
+	color: #1F2B35;
 	box-sizing: border-box;
 }
 
@@ -148,4 +148,8 @@
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
 	will-change: transform;
+}
+
+input[type=file] {
+	opacity: 0;
 }
